@@ -1,0 +1,19 @@
+{
+  "navigation": {
+    "origin": "The Origin",
+    "journey": "The Journey",
+    "powers": "Superpowers",
+    "contact": "Call to Action"
+  },
+  "hero": {
+    "title": "Frontend Developer",
+    "subtitle": "with global mindset"
+  },
+  "header": {
+    "theme": "Theme",
+    "language": "Language"
+  },
+  "footer": {
+    "copyright": "All rights reserved"
+  }
+}

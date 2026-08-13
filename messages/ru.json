@@ -1,0 +1,19 @@
+{
+  "navigation": {
+    "origin": "Начало",
+    "journey": "Мой путь",
+    "powers": "Суперсилы",
+    "contact": "Контакты"
+  },
+  "hero": {
+    "title": "Фронтенд-разработчик",
+    "subtitle": "с глобальным мышлением"
+  },
+  "header": {
+    "theme": "Тема",
+    "language": "Язык"
+  },
+  "footer": {
+    "copyright": "Все права защищены"
+  }
+}
