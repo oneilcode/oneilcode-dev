@@ -1,13 +1,31 @@
 {
+  "sidebar": {
+    "role": "Frontend Developer",
+    "cv": "Download CV"
+  },
   "navigation": {
-    "origin": "The Origin",
-    "journey": "The Journey",
-    "powers": "Superpowers",
-    "contact": "Call to Action"
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "journey": "My Journey",
+    "contact": "Contact"
   },
   "hero": {
     "title": "Frontend Developer",
-    "subtitle": "with global mindset"
+    "location": "Russia · Remote",
+    "name": "Viktoria O'Neil"
+  },
+  "about": {
+    "stats": {
+      "countries": "countries",
+      "language": "English",
+      "experience": "years of experience",
+      "cats": "cats"
+    },
+    "p1": "I'm a passionate traveler with over 50 countries visited and counting 🌍✈️",
+    "p2": "With commercial experience in web development, I am now fully focused on frontend technologies, creating fast and accessible user interfaces.",
+    "p3": "🎓 I have no formal education in IT — but I've gained my knowledge through self-study, online courses, and practical experience. I believe that passion and curiosity matter more than a diploma.",
+    "cats": "Outside of work, I'm a proud owner of two cats 🐱🐱",
+    "link": "More about my journey →"
   },
   "header": {
     "theme": "Theme",
