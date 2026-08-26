@@ -1,6 +1,7 @@
 'use client';
 
 import { Send } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 interface ContactFormProps {
@@ -8,6 +9,8 @@ interface ContactFormProps {
 }
 
 export default function ContactForm({ onSubmit }: ContactFormProps) {
+  const t = useTranslations('contacts');
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,7 +39,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         onChange={handleChange}
         required
         className="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-gray-900 transition outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-500/50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-        placeholder="Ваше имя"
+        placeholder={t('name')}
       />
 
       <input
@@ -47,7 +50,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         onChange={handleChange}
         required
         className="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-gray-900 transition outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-500/50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-        placeholder="Email"
+        placeholder={t('email')}
       />
 
       <textarea
@@ -58,7 +61,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         required
         rows={4}
         className="w-full resize-none rounded-lg border border-gray-200 bg-white px-4 py-3 text-gray-900 transition outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-500/50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-        placeholder="Сообщение"
+        placeholder={t('message')}
       />
 
       <button
@@ -66,7 +69,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         className="flex w-full items-center justify-center gap-2 rounded-lg bg-lime-600 px-6 py-3 font-medium text-white transition hover:bg-lime-700 dark:bg-lime-500 dark:hover:bg-lime-600"
       >
         <Send size={18} />
-        Отправить
+        {t('submit')}
       </button>
     </form>
   );
