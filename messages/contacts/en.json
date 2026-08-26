@@ -1,0 +1,14 @@
+{
+  "contacts": {
+    "title": "Contact Me",
+    "subtitle": "Open to collaboration · I'll reply within 24 hours",
+    "formTitle": "Send me a message",
+    "name": "Your name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "successTitle": "Message sent!",
+    "successMessage": "I'll get back to you soon.",
+    "contactsTitle": "Other ways to connect"
+  }
+}

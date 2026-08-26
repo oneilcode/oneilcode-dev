@@ -22,8 +22,8 @@ const useNavigation = () => {
 
   return [
     { name: t('home'), href: '/', icon: Home },
-    { name: t('portfolio'), href: '/portfolio', icon: Briefcase },
     { name: t('journey'), href: '/journey', icon: MapPin },
+    { name: t('portfolio'), href: '/portfolio', icon: Briefcase },
     { name: t('contact'), href: '/contact', icon: Mail },
   ];
 };

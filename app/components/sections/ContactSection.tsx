@@ -8,7 +8,7 @@ import { CONTACTS } from '@/constants';
 import ContactForm from '../features/ContactForm';
 
 export function ContactSection() {
-  const t = useTranslations('contact');
+  const t = useTranslations('contacts');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleFormSubmit = async (data: { name: string; email: string; message: string }) => {
