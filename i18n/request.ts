@@ -9,8 +9,15 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ? (requestedLocale as 'en' | 'ru')
       : routing.defaultLocale;
 
+  const messages = {
+    ...(await import(`../messages/${locale}.json`)).default,
+    ...(await import(`../messages/journey/${locale}.json`)).default,
+    ...(await import(`../messages/portfolio/${locale}.json`)).default,
+    ...(await import(`../messages/contacts/${locale}.json`)).default,
+  };
+
   return {
     locale,
-    messages: (await import(`../messages/${locale}.json`)).default,
+    messages,
   };
 });
