@@ -1,21 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Send, Sparkles, CheckCircle } from 'lucide-react';
-import { useState } from 'react';
+import { Send, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { CONTACTS } from '@/constants';
 import ContactForm from '../features/ContactForm';
 
 export function ContactSection() {
   const t = useTranslations('contacts');
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleFormSubmit = async (data: { name: string; email: string; message: string }) => {
-    console.log('Sending:', data);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
 
   return (
     <section className="mx-auto max-w-5xl px-4 py-12">
@@ -42,21 +34,9 @@ export function ContactSection() {
               {t('formTitle')}
             </h2>
 
-            {isSubmitted ? (
-              <div className="flex flex-1 flex-col items-center justify-center py-8 text-center">
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-lime-500/10">
-                  <CheckCircle size={32} className="text-lime-500" />
-                </div>
-                <h3 className="text-lg font-medium">{t('successTitle')}</h3>
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                  {t('successMessage')}
-                </p>
-              </div>
-            ) : (
-              <div className="flex-1">
-                <ContactForm onSubmit={handleFormSubmit} />
-              </div>
-            )}
+            <div className="flex-1">
+              <ContactForm />
+            </div>
           </div>
         </motion.div>
 
