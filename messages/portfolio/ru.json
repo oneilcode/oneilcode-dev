@@ -1,0 +1,142 @@
+{
+  "portfolio": {
+    "title": "Мои проекты",
+    "subtitle": "Пет-проекты и командные работы",
+    "personalTitle": "Личные проекты",
+    "teamTitle": "Командные проекты",
+    "back": "Назад к проектам",
+    "items": [
+      {
+        "id": 1,
+        "title": "WishTick",
+        "slug": "wishtick",
+        "description": "Цифровой дневник желаний: добавляй, отслеживай и анализируй свои мечты",
+        "tech": ["React", "Vite", "React Router", "JSON Server"],
+        "github": "https://github.com/oneilcode/wishTick",
+        "demo": "https://wishtick.onrender.com/",
+        "youtube": "https://wishtick.onrender.com/",
+        "featured": true,
+        "type": "personal",
+        "role": null,
+        "features": [
+          "Добавление, удаление, редактирование карточек желаний",
+          "Поиск и сортировка",
+          "Страница «Вдохновись идеями» с подгрузкой картинок",
+          "Статистика исполненных желаний"
+        ],
+        "detail": {
+          "overview": "WishTick — это приложение для ведения дневника желаний. Оно помогает структурировать мечты, отслеживать прогресс и находить вдохновение.",
+          "role": "Полноценная разработка frontend-части: дизайн, архитектура, реализация всех функций, деплой.",
+          "challenge": "Главная задача — создать интуитивно понятный интерфейс для ведения дневника желаний с возможностью фильтрации и статистики.",
+          "solution": "Использовала React Router для навигации, JSON Server для имитации API, реализовала поиск, сортировку и визуализацию статистики.",
+          "results": "Приложение помогает пользователям не забывать о своих желаниях и видеть прогресс их исполнения."
+        }
+      },
+      {
+        "id": 2,
+        "title": "Babushka Market",
+        "slug": "babushka-market",
+        "description": "Онлайн-магазин антикварных товаров с корзиной и уведомлениями",
+        "tech": ["React", "TypeScript", "Vite", "React Router", "React Toastify"],
+        "github": "https://github.com/oneilcode/react-shop",
+        "demo": "https://babushka-market.vercel.app/",
+        "youtube": "https://wishtick.onrender.com/",
+        "featured": true,
+        "type": "personal",
+        "role": null,
+        "features": [
+          "Каталог антикварных товаров",
+          "Корзина с подсчётом суммы",
+          "Уведомления при добавлении/удалении",
+          "Винтажный дизайн"
+        ],
+        "detail": {
+          "overview": "Babushka Market — онлайн-магазин антикварных товаров с винтажным дизайном.",
+          "role": "Полная разработка: от дизайна до деплоя на Vercel.",
+          "challenge": "Создать атмосферный магазин с удобной корзиной и уведомлениями.",
+          "solution": "React Router для навигации, React Toastify для уведомлений, TypeScript для типизации.",
+          "results": "Магазин с винтажным стилем, полностью функциональная корзина и приятные уведомления."
+        }
+      },
+      {
+        "id": 3,
+        "title": "Swagger Editor App",
+        "slug": "swagger-editor",
+        "description": "Визуальный редактор OpenAPI/Swagger-спецификаций с REST-клиентом",
+        "tech": ["React", "Next.js", "TypeScript", "Swagger"],
+        "github": "https://github.com/oneilcode",
+        "demo": "https://example.com",
+        "youtube": "https://wishtick.onrender.com/",
+        "featured": true,
+        "type": "team",
+        "role": "Разработала визуальный редактор OpenAPI-спецификаций, реализовала REST-клиент и деплой на Netlify. Участвовала в код-ревью и распределении задач в команде из 3 человек.",
+        "features": [
+          "Визуальный редактор спецификаций",
+          "REST-клиент для тестирования API",
+          "Деплой на Netlify",
+          "Работа в команде из 3 человек"
+        ],
+        "detail": {
+          "overview": "Swagger Editor App — полнофункциональный редактор OpenAPI-спецификаций с REST-клиентом.",
+          "role": "В команде из 3 человек разработала визуальный редактор, REST-клиент и настроила деплой на Netlify.",
+          "challenge": "Создать удобный инструмент для работы с OpenAPI-спецификациями в production.",
+          "solution": "Реализовала редактор с подсветкой синтаксиса, интеграцию с API и деплой на Netlify.",
+          "results": "Готовый продукт для визуального редактирования спецификаций и тестирования API."
+        }
+      },
+      {
+        "id": 4,
+        "title": "Interview Simulator",
+        "slug": "interview-simulator",
+        "description": "Симулятор собеседований для подготовки к техническим интервью",
+        "tech": ["TypeScript", "React", "Team Project"],
+        "github": "https://github.com/oneilcode",
+        "demo": null,
+        "youtube": "https://wishtick.onrender.com/",
+        "featured": true,
+        "type": "team",
+        "role": "Реализовала интерфейс симулятора, логику генерации вопросов и интеграцию с API. Работала в команде из 5 человек, проводила код-ревью.",
+        "features": [
+          "Генерация вопросов по уровням сложности",
+          "Таймер и оценка ответов",
+          "Командная работа (5 человек)",
+          "TypeScript + React"
+        ],
+        "detail": {
+          "overview": "Interview Simulator — инструмент для подготовки к техническим собеседованиям.",
+          "role": "В команде из 5 человек разработала интерфейс, логику генерации вопросов и интеграцию с API.",
+          "challenge": "Создать реалистичный симулятор собеседования с разными уровнями сложности.",
+          "solution": "Генератор вопросов с учётом уровня, таймер для ответов, система оценки.",
+          "results": "Работающий симулятор для подготовки к техническим интервью."
+        }
+      },
+      {
+        "id": 5,
+        "title": "Portfolio Website (этот сайт)",
+        "slug": "portfolio",
+        "description": "Сайт-визитка с локализацией, тёмной темой и анимациями",
+        "tech": ["Next.js", "TypeScript", "Tailwind", "Framer Motion", "Shadcn/ui"],
+        "github": "https://github.com/oneilcode/oneilcode-dev",
+        "demo": "https://oneilcode-dev.vercel.app",
+        "youtube": "https://wishtick.onrender.com/",
+        "featured": false,
+        "type": "personal",
+        "role": null,
+        "features": [
+          "Локализация EN/RU (next-intl)",
+          "Тёмная/светлая тема (next-themes)",
+          "Анимации (Framer Motion)",
+          "Shadcn/ui компоненты",
+          "CI/CD (GitHub Actions + Vercel)"
+        ],
+        "detail": {
+          "overview": "Этот сайт — моё портфолио, выполненное в современном стиле с поддержкой двух языков и тёмной темы.",
+          "role": "Полная разработка: от дизайна до деплоя на Vercel.",
+          "challenge": "Создать сайт, который одновременно показывает мои навыки и является готовым продуктом.",
+          "solution": "Next.js, Tailwind, Framer Motion, Shadcn/ui, локализация, тёмная тема, CI/CD.",
+          "results": "Готовое портфолио, которое можно показывать работодателям."
+        }
+      }
+    ]
+  }
+}
