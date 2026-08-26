@@ -40,9 +40,7 @@ export default function ContactForm() {
           className="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-gray-900 transition outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-500/50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           placeholder={t('name')}
         />
-        {state?.errors?.name && (
-          <p className="mt-1 text-sm text-red-500">{state.errors.name[0]}</p>
-        )}
+        {state?.errors?.name && <p className="mt-1 text-sm text-red-500">{state.errors.name[0]}</p>}
       </div>
 
       <div>

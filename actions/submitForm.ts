@@ -19,10 +19,7 @@ const formSchema = z.object({
   message: z.string().min(5, 'Сообщение слишком короткое'),
 });
 
-export async function submitForm(
-  state: FormState,
-  formData: FormData
-): Promise<FormState> {
+export async function submitForm(state: FormState, formData: FormData): Promise<FormState> {
   const name = formData.get('name') as string;
   const email = formData.get('email') as string;
   const message = formData.get('message') as string;
@@ -39,9 +36,7 @@ export async function submitForm(
   try {
     const supabase = await createClient();
 
-    const { error } = await supabase
-      .from('messages')
-      .insert([{ name, email, message }]);
+    const { error } = await supabase.from('messages').insert([{ name, email, message }]);
 
     if (error) {
       return {
