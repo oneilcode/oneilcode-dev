@@ -14,6 +14,7 @@ const iconMap = {
 
 export function JourneyTimelineSection() {
   const t = useTranslations('journey');
+
   const items = t.raw('items') as Array<{
     id: number;
     date: string;

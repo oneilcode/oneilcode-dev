@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import AboutSection from './AboutSection';
-import { TECHNOLOGIES } from '@/constants';
+import { AVATAR, TECHNOLOGIES } from '@/constants';
 
 export default function HeroSection() {
   const t = useTranslations('hero');
@@ -20,7 +20,7 @@ export default function HeroSection() {
         >
           <div className="h-24 w-24 overflow-hidden rounded-full border-2 border-lime-500/20 shadow-lg md:h-32 md:w-32 dark:border-lime-400/20">
             <Image
-              src="/avatar.jpg"
+              src={AVATAR}
               alt="Виктория ОНил"
               width={128}
               height={128}
