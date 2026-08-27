@@ -1,6 +1,9 @@
 import { Mail, Briefcase } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaTelegram, FaWhatsapp } from 'react-icons/fa';
 
+export const AVATAR = 'https://avatars.githubusercontent.com/u/98149863?v=4';
+export const AVATAR_FALLBACK = 'VO';
+
 export const TECHNOLOGIES = [
   'JavaScript',
   'TypeScript',
