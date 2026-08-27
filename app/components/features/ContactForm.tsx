@@ -3,7 +3,8 @@
 import { submitForm } from '@/actions/submitForm';
 import { Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { useActionState } from 'react';
+import { useActionState, useEffect } from 'react';
+import { toast } from 'sonner';
 
 type FormState = {
   success: boolean;
@@ -28,6 +29,16 @@ export default function ContactForm() {
     submitForm,
     initialState
   );
+
+  useEffect(() => {
+    if (state?.message) {
+      if (state.success) {
+        toast.success(state.message);
+      } else if (!state.success && !state.errors) {
+        toast.error(state.message);
+      }
+    }
+  }, [state]);
 
   return (
     <form action={formAction} className="space-y-4">
@@ -70,18 +81,6 @@ export default function ContactForm() {
           <p className="mt-1 text-sm text-red-500">{state.errors.message[0]}</p>
         )}
       </div>
-
-      {state?.success && (
-        <div className="rounded-lg bg-green-50 p-3 text-sm text-green-700 dark:bg-green-950/30 dark:text-green-400">
-          {state.message}
-        </div>
-      )}
-
-      {state?.success === false && state?.message && !state?.errors && (
-        <div className="rounded-lg bg-red-50 p-3 text-sm text-red-700 dark:bg-red-950/30 dark:text-red-400">
-          {state.message}
-        </div>
-      )}
 
       <button
         type="submit"
