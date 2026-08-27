@@ -1,6 +1,7 @@
 'use server';
 
 import { createClient } from '@/lib/supabase/server';
+import { sendTelegramMessage } from '@/lib/telegram/sendMessage';
 import { z } from 'zod';
 
 type FormState = {
@@ -44,6 +45,21 @@ export async function submitForm(state: FormState, formData: FormData): Promise<
         message: 'Не удалось отправить сообщение. Попробуйте позже.',
       };
     }
+
+    const telegramMessage = `
+        📩 <b>Новое сообщение с сайта!</b>
+        
+        👤 <b>Имя:</b> ${name}
+        📧 <b>Email:</b> ${email}
+        💬 <b>Сообщение:</b>
+        ${message}
+        
+        📅 <b>Время:</b> ${new Date().toLocaleString('ru-RU')}
+            `;
+
+    sendTelegramMessage(telegramMessage).catch((err) => {
+      console.error('Telegram не отвечает, но сообщение сохранено:', err);
+    });
 
     return {
       success: true,
