@@ -19,6 +19,7 @@ export function ContactSection() {
       >
         <h1 className="text-4xl font-bold tracking-tight md:text-5xl">{t('title')}</h1>
         <p className="mt-2 text-gray-500 dark:text-gray-400">{t('subtitle')}</p>
+        <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-linear-to-r from-lime-400 to-emerald-400" />
       </motion.div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:items-stretch">
