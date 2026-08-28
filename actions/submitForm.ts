@@ -20,6 +20,10 @@ const formSchema = z.object({
   message: z.string().min(5, 'Сообщение слишком короткое'),
 });
 
+function escapeHtml(str: string) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 export async function submitForm(state: FormState, formData: FormData): Promise<FormState> {
   const name = formData.get('name') as string;
   const email = formData.get('email') as string;
@@ -36,7 +40,6 @@ export async function submitForm(state: FormState, formData: FormData): Promise<
 
   try {
     const supabase = await createClient();
-
     const { error } = await supabase.from('messages').insert([{ name, email, message }]);
 
     if (error) {
@@ -45,30 +48,33 @@ export async function submitForm(state: FormState, formData: FormData): Promise<
         message: 'Не удалось отправить сообщение. Попробуйте позже.',
       };
     }
-
-    const telegramMessage = `
-        📩 <b>Новое сообщение с сайта!</b>
-        
-        👤 <b>Имя:</b> ${name}
-        📧 <b>Email:</b> ${email}
-        💬 <b>Сообщение:</b>
-        ${message}
-        
-        📅 <b>Время:</b> ${new Date().toLocaleString('ru-RU')}
-            `;
-
-    sendTelegramMessage(telegramMessage).catch((err) => {
-      console.error('Telegram не отвечает, но сообщение сохранено:', err);
-    });
-
-    return {
-      success: true,
-      message: 'Сообщение успешно отправлено!',
-    };
-  } catch {
+  } catch (err) {
+    console.error('Unexpected error while saving to Supabase:', err);
     return {
       success: false,
       message: 'Произошла ошибка. Попробуйте позже.',
     };
   }
+
+  const telegramMessage = `
+📩 <b>Новое сообщение с сайта!</b>
+
+👤 <b>Имя:</b> ${escapeHtml(name)}
+📧 <b>Email:</b> ${escapeHtml(email)}
+💬 <b>Сообщение:</b>
+${escapeHtml(message)}
+
+📅 <b>Время:</b> ${new Date().toLocaleString('ru-RU')}
+  `.trim();
+
+  try {
+    await sendTelegramMessage(telegramMessage);
+  } catch (err) {
+    console.error('Сообщение сохранено в Supabase, но Telegram-уведомление не отправлено:', err);
+  }
+
+  return {
+    success: true,
+    message: 'Сообщение успешно отправлено!',
+  };
 }
