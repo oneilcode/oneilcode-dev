@@ -45,7 +45,7 @@ export function SidebarNavigation() {
 
           return (
             <SidebarMenuItem key={item.name}>
-              <SidebarMenuButton>
+              <SidebarMenuButton className="p-0">
                 <Link
                   href={item.href}
                   className={cn(
