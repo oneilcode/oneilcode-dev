@@ -119,17 +119,43 @@
       },
       {
         "id": 5,
-        "title": "Portfolio Website (this site)",
+        "title": "OneilCode Portfolio",
         "slug": "portfolio",
-        "description": "Business card website with localization, dark theme, and animations",
-        "tech": ["Next.js", "TypeScript", "Tailwind", "Framer Motion", "Shadcn/ui"],
+        "description": "This portfolio site is a complete web application that demonstrates my skills, tech stack, and development philosophy. It features project showcases, my professional journey, and a fully functional contact form for easy communication",
+        "tech": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Supabase",
+          "next-intl",
+          "next-themes",
+          "Zod",
+          "React Hook Form",
+          "Lucide React",
+          "React Icons",
+          "Shadcn/ui",
+          "Sonner",
+          "Vitest"
+        ],
         "github": "https://github.com/oneilcode/oneilcode-dev",
-        "demo": "https://oneilcode-dev.vercel.app",
-        "youtube": "https://wishtick.onrender.com/",
+        "demo": "https://oneilcode-dev.vercel.app/ru",
+        "youtube": null,
         "type": "personal",
         "role": [
-          "Designed and developed the landing page — introduced the app's functionality and features with responsive layouts and animations",
-          "Built the Console widget — an interactive drag-and-drop exercise where users arrange console outputs in the correct order. Implemented answer validation logic and real-time feedback"
+          "Built the portfolio website from scratch — from design to deployment, including responsive layout, animations, localization, and dark theme",
+          "Created the home page with an animated hero section and 'About Me' section",
+          "Implemented the 'My Journey' timeline with experience cards and a pixel-style mountain animation",
+          "Developed the portfolio page with project cards and detailed project pages",
+          "Set up dark and light themes with user preference persistence",
+          "Integrated EN/RU localization with language switching across all pages",
+          "Built a contact form with Zod validation",
+          "Configured message storage in Supabase with RLS policies",
+          "Integrated Telegram notifications for new messages from the site",
+          "Added entrance animations for elements using Framer Motion",
+          "Developed a custom 404 page with redirect to home",
+          "Set up CI/CD via GitHub Actions and auto-deployment to Vercel"
         ]
       }
     ]
