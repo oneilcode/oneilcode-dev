@@ -6,6 +6,12 @@
     "teamTitle": "Team Projects",
     "detailLink": "Learn more",
     "back": "Back to projects",
+    "aboutTitle": "About the project",
+    "myRoleTitle": "My contribution to the project",
+    "sideInfoTitle": "Stack and links",
+    "techTitle": "Technologies",
+    "demoTitle": "Demo Live",
+    "presentationTitle": "Presentation",
     "items": [
       {
         "id": 1,
@@ -16,22 +22,11 @@
         "github": "https://github.com/oneilcode/wishTick",
         "demo": "https://wishtick.onrender.com/",
         "youtube": "https://wishtick.onrender.com/",
-        "featured": true,
         "type": "personal",
-        "role": null,
-        "features": [
-          "Add, delete, edit wish cards",
-          "Search and sorting",
-          "Inspiration page with images",
-          "Statistics of fulfilled wishes"
-        ],
-        "detail": {
-          "overview": "WishTick is a wish diary app that helps you structure your dreams, track progress, and find inspiration.",
-          "role": "Full frontend development: design, architecture, implementation of all features, deployment.",
-          "challenge": "The main challenge was to create an intuitive interface for keeping a wish diary with filtering and statistics.",
-          "solution": "Used React Router for navigation, JSON Server for API simulation, implemented search, sorting, and statistics visualization.",
-          "results": "The app helps users not forget about their wishes and see the progress of their fulfillment."
-        }
+        "role": [
+          "Designed and developed the landing page — introduced the app's functionality and features with responsive layouts and animations",
+          "Built the Console widget — an interactive drag-and-drop exercise where users arrange console outputs in the correct order. Implemented answer validation logic and real-time feedback"
+        ]
       },
       {
         "id": 2,
@@ -42,74 +37,85 @@
         "github": "https://github.com/oneilcode/react-shop",
         "demo": "https://babushka-market.vercel.app/",
         "youtube": "https://wishtick.onrender.com/",
-        "featured": true,
         "type": "personal",
-        "role": null,
-        "features": [
-          "Antique catalog",
-          "Shopping cart with total calculation",
-          "Toast notifications",
-          "Vintage design"
-        ],
-        "detail": {
-          "overview": "Babushka Market is an online antique store with a vintage design and a fully functional shopping cart.",
-          "role": "Full development: from design to deployment on Vercel.",
-          "challenge": "Create an atmospheric store with a convenient cart and notifications.",
-          "solution": "Used React Router for navigation, React Toastify for notifications, TypeScript for typing.",
-          "results": "A vintage-style store with a fully functional cart and pleasant notifications."
-        }
+        "role": [
+          "Designed and developed the landing page — introduced the app's functionality and features with responsive layouts and animations",
+          "Built the Console widget — an interactive drag-and-drop exercise where users arrange console outputs in the correct order. Implemented answer validation logic and real-time feedback"
+        ]
       },
       {
         "id": 3,
         "title": "Swagger Editor App",
         "slug": "swagger-editor",
-        "description": "Visual OpenAPI/Swagger specification editor with REST client",
-        "tech": ["React", "Next.js", "TypeScript", "Swagger"],
-        "github": "https://github.com/oneilcode",
-        "demo": "https://example.com",
-        "youtube": "https://wishtick.onrender.com/",
-        "featured": true,
-        "type": "team",
-        "role": "Developed the visual OpenAPI specification editor, implemented REST client and Netlify deployment. Participated in code reviews and task distribution in a team of 3.",
-        "features": [
-          "Visual specification editor",
-          "REST client for API testing",
-          "Netlify deployment",
-          "Team of 3"
+        "description": "Swagger Editor App is a full-featured tool for working with OpenAPI/Swagger specifications, combining a visual editor and a flexible REST client in a single application. It allows developers and QA engineers to design, validate, and instantly test APIs using a server-side proxy to bypass CORS limitations.",
+        "tech": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Zustand",
+          "Mantine",
+          "React Hook Form",
+          "Zod",
+          "Codemirror",
+          "Swagger Parser",
+          "Supabase",
+          "next-intl",
+          "Vitest"
         ],
-        "detail": {
-          "overview": "Swagger Editor App is a full-featured OpenAPI specification editor with a REST client for API testing.",
-          "role": "In a team of 3, I developed the visual editor, REST client, and set up Netlify deployment.",
-          "challenge": "Create a convenient tool for working with OpenAPI specifications that can be used in production.",
-          "solution": "Implemented a syntax-highlighting editor, API integration, and Netlify deployment.",
-          "results": "A ready-to-use product for visually editing specifications and testing APIs."
-        }
+        "github": "https://github.com/She-Devs/swagger-editor-app",
+        "demo": "https://swagger-editor-app.netlify.app/",
+        "youtube": "https://www.youtube.com/watch?v=E1m8sfXt1iY",
+        "type": "team",
+        "role": [
+          "Developed the App Header — a responsive component with dynamic navigation: unauthenticated users see 'Sign In' and 'Sign Up' buttons, authenticated users see 'History' and 'Sign Out'",
+          "Implemented private route protection — expired or invalid tokens redirect users to the main page",
+          "Built the Swagger Editor with support for loading and pasting OpenAPI schemas in JSON and YAML formats, auto-detection of format, and switching between formats with conversion",
+          "Added schema validation with visual error indication",
+          "Integrated schema saving for authenticated users — the schema is automatically restored in the editor on the next login",
+          "Added language switching (EN/RU)",
+          "Configured private route protection and error handling",
+          "Created a custom 404 page",
+          "Participated in weekly sync meetings to discuss completed and upcoming tasks",
+          "Conducted code reviews for colleagues",
+          "Managed the GitHub project board, tracking progress and deadlines",
+          "Recorded a video presentation of the project and defended it in front of mentors"
+        ]
       },
       {
         "id": 4,
-        "title": "Interview Simulator",
+        "title": "Tandem - SPA Application",
         "slug": "interview-simulator",
-        "description": "Interview preparation simulator for technical interviews",
-        "tech": ["TypeScript", "React", "Team Project"],
-        "github": "https://github.com/oneilcode",
-        "demo": null,
-        "youtube": "https://wishtick.onrender.com/",
-        "featured": true,
-        "type": "team",
-        "role": "Implemented the simulator interface, question generation logic, and API integration. Worked in a team of 5, conducted code reviews.",
-        "features": [
-          "Question generation by difficulty",
-          "Timer and answer scoring",
-          "Team of 5",
-          "TypeScript + React"
+        "description": "Tandem is a project that prepares you for a technical interview for a Frontend Developer role. It includes an AI assistant that helps you get ready for the interview, along with widgets where you can practice, and a knowledge library where you can study the material. You can also earn points and compete with developers from around the world.",
+        "tech": [
+          "TypeScript",
+          "React",
+          "Redux Toolkit",
+          "Supabase",
+          "React Router DOM",
+          "React Hook Form",
+          "Vite",
+          "Mantine",
+          "React Testing Library",
+          "Cypress",
+          "Zod"
         ],
-        "detail": {
-          "overview": "Interview Simulator is a tool for preparing for technical interviews by generating questions and evaluating answers.",
-          "role": "In a team of 5, I developed the simulator interface, question generation logic, and API integration.",
-          "challenge": "Create a realistic interview simulator with different difficulty levels.",
-          "solution": "Implemented a question generator with difficulty levels, a timer for answers, and a scoring system.",
-          "results": "A working simulator that helps developers prepare for technical interviews."
-        }
+        "github": "https://github.com/RSSAgents/tandem",
+        "demo": "https://tandem-three.vercel.app/",
+        "youtube": "https://www.youtube.com/watch?v=A4Hip18og64",
+        "type": "team",
+        "role": [
+          "Designed and developed the landing page — introduced the app's functionality and features with responsive layouts and animations",
+          "Built the Console widget — an interactive drag-and-drop exercise where users arrange console outputs in the correct order. Implemented answer validation logic and real-time feedback",
+          "Developed the points system — a two-part component including points displayed in the sidebar and a progress snail visual indicator showing interview readiness based on completed mock interviews with the AI agent",
+          "Created the leaderboard table with server-side sorting by points",
+          "Made the interface fully responsive and cross-browser compatible",
+          "Set up global theming with support for light and dark modes",
+          "Participated in weekly sync meetings to discuss completed and upcoming tasks, sharing insights and experience",
+          "Conducted code reviews for teammates, providing constructive feedback",
+          "Managed the GitHub project board, tracking progress and deadlines",
+          "Kept daily progress logs — documented completed tasks and achievements",
+          "Recorded a video presentation of the project and defended it online in front of mentors"
+        ]
       },
       {
         "id": 5,
@@ -120,23 +126,11 @@
         "github": "https://github.com/oneilcode/oneilcode-dev",
         "demo": "https://oneilcode-dev.vercel.app",
         "youtube": "https://wishtick.onrender.com/",
-        "featured": false,
         "type": "personal",
-        "role": null,
-        "features": [
-          "EN/RU localization (next-intl)",
-          "Dark/light theme (next-themes)",
-          "Animations (Framer Motion)",
-          "Shadcn/ui components",
-          "CI/CD (GitHub Actions + Vercel)"
-        ],
-        "detail": {
-          "overview": "This site is my portfolio, built in a modern style with support for two languages and a dark theme.",
-          "role": "Full development: from design to deployment on Vercel.",
-          "challenge": "Create a site that both showcases my skills and serves as a finished product.",
-          "solution": "Used Next.js, Tailwind, Framer Motion, Shadcn/ui, localization, dark theme, and CI/CD.",
-          "results": "A completed portfolio ready to be shown to employers."
-        }
+        "role": [
+          "Designed and developed the landing page — introduced the app's functionality and features with responsive layouts and animations",
+          "Built the Console widget — an interactive drag-and-drop exercise where users arrange console outputs in the correct order. Implemented answer validation logic and real-time feedback"
+        ]
       }
     ]
   }
