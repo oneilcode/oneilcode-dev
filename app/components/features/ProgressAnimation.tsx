@@ -12,12 +12,19 @@ export function ProgressAnimation() {
   useEffect(() => {
     let start: number;
     let id: number;
+    const duration = 6000;
+  
     const animate = (t: number) => {
       if (!start) start = t;
-      const value = ((t - start) / 7000) % 1;
-      setCoverage(Math.abs(Math.sin(value * Math.PI * 2)) * 100);
+      const elapsed = t - start;
+      const raw = (elapsed % duration) / duration; 
+  
+      const eased = Math.min(raw * 1.05, 1);
+      setCoverage(eased * 100);
+  
       id = requestAnimationFrame(animate);
     };
+  
     id = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(id);
   }, []);
