@@ -88,7 +88,7 @@ export default function ContactForm() {
         className="flex w-full items-center justify-center gap-2 rounded-lg bg-lime-600 px-6 py-3 font-medium text-white transition hover:bg-lime-700 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-lime-500 dark:hover:bg-lime-600"
       >
         <Send size={18} />
-        {isPending ? 'Отправка...' : t('submit')}
+        {isPending ? t('sending') : t('submit')}
       </button>
     </form>
   );

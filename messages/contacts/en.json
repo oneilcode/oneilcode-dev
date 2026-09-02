@@ -7,6 +7,7 @@
     "email": "Email",
     "message": "Message",
     "submit": "Send",
+    "sending": "Sending...",
     "successTitle": "Message sent!",
     "successMessage": "I'll get back to you soon.",
     "contactsTitle": "Other ways to connect"
