@@ -69,7 +69,7 @@ export function JourneyTimelineSection() {
               } ${isEven ? 'md:flex-row md:text-right' : 'md:flex-row-reverse md:text-left'}`}
             >
               <div
-                className={`absolute top-1 left-4 z-10 hidden h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-2 md:left-1/2 md:flex ${
+                className={`bg-white dark:bg-gray-900 absolute top-1 left-4 z-20 hidden h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-2 md:left-1/2 md:flex ${
                   isEven
                     ? 'border-lime-500 bg-lime-500/10 text-lime-600 dark:border-lime-400 dark:bg-lime-400/10 dark:text-lime-400'
                     : 'border-gray-300 bg-white text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400'
