@@ -13,18 +13,18 @@ export function ProgressAnimation() {
     let start: number;
     let id: number;
     const duration = 6000;
-  
+
     const animate = (t: number) => {
       if (!start) start = t;
       const elapsed = t - start;
-      const raw = (elapsed % duration) / duration; 
-  
+      const raw = (elapsed % duration) / duration;
+
       const eased = Math.min(raw * 1.05, 1);
       setCoverage(eased * 100);
-  
+
       id = requestAnimationFrame(animate);
     };
-  
+
     id = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(id);
   }, []);
