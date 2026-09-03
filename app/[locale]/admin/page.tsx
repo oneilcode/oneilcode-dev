@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { supabaseClient } from '@/lib/supabase/client'; 
+import { supabaseClient } from '@/lib/supabase/client';
 import { Trash2 } from 'lucide-react';
 
 type Message = {
@@ -18,35 +18,35 @@ export default function AdminPage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(true);
 
-const loadMessages = useCallback(async () => {
-  try {
-    setLoading(true);
-    const { data, error } = await supabaseClient
-      .from('messages')
-      .select('*')
-      .order('created_at', { ascending: false });
+  const loadMessages = useCallback(async () => {
+    try {
+      setLoading(true);
+      const { data, error } = await supabaseClient
+        .from('messages')
+        .select('*')
+        .order('created_at', { ascending: false });
 
-    if (error) throw error;
-    setMessages(data || []);
-  } catch (error) {
-    console.error('Ошибка загрузки:', error);
-  } finally {
-    setLoading(false);
-  }
-}, []);
+      if (error) throw error;
+      setMessages(data || []);
+    } catch (error) {
+      console.error('Ошибка загрузки:', error);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
-useEffect(() => {
-  const isAdmin = document.cookie.includes('admin=true');
+  useEffect(() => {
+    const isAdmin = document.cookie.includes('admin=true');
 
-  if (!isAdmin) {
-    router.push('/admin/login');
-    return;
-  }
+    if (!isAdmin) {
+      router.push('/admin/login');
+      return;
+    }
 
-  setTimeout(() => {
-    loadMessages();
-  }, 0);
-}, [loadMessages, router]);
+    setTimeout(() => {
+      loadMessages();
+    }, 0);
+  }, [loadMessages, router]);
 
   const deleteMessage = async (id: number) => {
     if (!confirm('Удалить сообщение?')) return;
@@ -86,12 +86,8 @@ useEffect(() => {
     <div className="mx-auto max-w-6xl px-4 py-12">
       <div className="mb-8 flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Сообщения
-          </h1>
-          <p className="text-sm text-gray-500">
-            Всего {messages.length} сообщений
-          </p>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Сообщения</h1>
+          <p className="text-sm text-gray-500">Всего {messages.length} сообщений</p>
         </div>
         <button
           onClick={logout}
@@ -111,15 +107,9 @@ useEffect(() => {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50 text-left dark:border-gray-800 dark:bg-gray-800/50">
-                  <th className="px-4 py-3 font-medium text-gray-600 dark:text-gray-400">
-                    Дата
-                  </th>
-                  <th className="px-4 py-3 font-medium text-gray-600 dark:text-gray-400">
-                    Имя
-                  </th>
-                  <th className="px-4 py-3 font-medium text-gray-600 dark:text-gray-400">
-                    Email
-                  </th>
+                  <th className="px-4 py-3 font-medium text-gray-600 dark:text-gray-400">Дата</th>
+                  <th className="px-4 py-3 font-medium text-gray-600 dark:text-gray-400">Имя</th>
+                  <th className="px-4 py-3 font-medium text-gray-600 dark:text-gray-400">Email</th>
                   <th className="px-4 py-3 font-medium text-gray-600 dark:text-gray-400">
                     Сообщение
                   </th>
@@ -134,7 +124,7 @@ useEffect(() => {
                     key={msg.id}
                     className="border-b border-gray-100 hover:bg-gray-50 dark:border-gray-800 dark:hover:bg-gray-800/50"
                   >
-                    <td className="whitespace-nowrap px-4 py-3 text-gray-500 dark:text-gray-400">
+                    <td className="px-4 py-3 whitespace-nowrap text-gray-500 dark:text-gray-400">
                       {formatDate(msg.created_at)}
                     </td>
                     <td className="px-4 py-3 font-medium text-gray-900 dark:text-white">
@@ -148,7 +138,7 @@ useEffect(() => {
                         {msg.email}
                       </a>
                     </td>
-                    <td className="px-4 py-3 text-gray-600 dark:text-gray-400 max-w-xs truncate">
+                    <td className="max-w-xs truncate px-4 py-3 text-gray-600 dark:text-gray-400">
                       {msg.message}
                     </td>
                     <td className="px-4 py-3 text-center">

@@ -34,9 +34,7 @@ export default function AdminLogin() {
   return (
     <div className="fixed inset-0 flex items-center justify-center overflow-hidden bg-white dark:bg-gray-950">
       <div className="w-full max-w-md rounded-2xl border border-gray-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900/50">
-        <h1 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
-          Вход в админку
-        </h1>
+        <h1 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">Вход в админку</h1>
         <p className="mb-6 text-sm text-gray-500 dark:text-gray-400">
           Введите пароль для доступа к сообщениям
         </p>
