@@ -7,7 +7,16 @@ import { useTheme } from 'next-themes';
 export function ProgressAnimation() {
   const [coverage, setCoverage] = useState(0);
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const isDark = theme === 'dark';
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     let start: number;
@@ -37,6 +46,32 @@ export function ProgressAnimation() {
     { text: '  ✓ 3 failed', status: 'fail' },
     { text: '▶ coverage: ' + Math.round(coverage) + '%', status: 'info' },
   ];
+
+  if (!mounted) {
+    return (
+      <div className="rounded-2xl border-2 border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-[#0a0a0f]">
+        <div className="flex items-center justify-between">
+          <span className="font-mono text-xs uppercase tracking-widest text-gray-400 dark:text-gray-500">
+            🧪 code coverage
+          </span>
+          <span className="font-mono text-sm font-bold text-gray-900 dark:text-white">0%</span>
+        </div>
+        <div className="mt-3 grid grid-cols-20 gap-0.5">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div key={i} className="h-4 w-full bg-gray-200 dark:bg-gray-800" />
+          ))}
+        </div>
+        <div className="mt-3 flex justify-between font-mono text-[10px] text-gray-400 dark:text-gray-500">
+          <span className="flex items-center gap-1">
+            <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-lime-500" />
+            running
+          </span>
+          <span>⚡ 0%</span>
+          <span>✅ passed</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
