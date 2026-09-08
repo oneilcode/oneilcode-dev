@@ -78,15 +78,16 @@
       },
       {
         "id": 5,
-        "date": "2010 — 2015",
-        "title": "Khabarovsk State Academy of Economics and Law",
-        "subtitle": "Faculty of International Economic Relations",
+        "date": "2022 - May 2022",
+        "title": "The Beginning: Self-study",
+        "subtitle": "HTML · CSS · JavaScript",
         "description": [
-          "Specialization: International Economic Relations",
-          "Graduated with Specialist degree"
+          "Started learning layout from free courses and YouTube",
+          "Built first landing pages, learned HTML, CSS, JavaScript",
+          "Explored responsive design and cross-browser compatibility"
         ],
-        "location": "Khabarovsk, Russia",
-        "color": "blue"
+        "location": "Self-taught",
+        "color": "purple"
       }
     ]
   }
