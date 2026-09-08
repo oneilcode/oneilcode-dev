@@ -1,0 +1,143 @@
+{
+  "superpowers": {
+    "title": "🛠️ Skills & Tech",
+    "subtitle": "Tech stack and real experience",
+    "details": "View details",
+    "skills": [
+      {
+        "id": 1,
+        "name": "JavaScript",
+        "icon": "🟨",
+        "experience": [
+          "Know the differences between data types and == vs ===",
+          "Understand variable scope (let, const, var) and closures",
+          "Can work with arrays and objects using map, filter, reduce, find and other methods",
+          "Understand asynchrony: Promises, async/await, error handling with try/catch",
+          "Know how the event loop works and the difference between microtasks and macrotasks",
+          "Can work with DOM and handle events",
+          "Understand destructuring, spread/rest operators",
+          "Know how this works in different contexts",
+          "Know how prototypes and inheritance work",
+          "Can work with localStorage, sessionStorage, cookies",
+          "Can work with fetch and handle HTTP requests"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "TypeScript",
+        "icon": "📘",
+        "experience": [
+          "Understand strict mode (strict: true) and can configure tsconfig for a project",
+          "Know why it's important to avoid any and use proper types instead",
+          "Understand union and intersection types",
+          "Know how to use enums and literal types",
+          "Can type objects with interface and type, understand the difference between them",
+          "Know how type narrowing works (typeof, instanceof, in)",
+          "Type API requests and responses to ensure data safety",
+          "Type React components: props, hooks, events, refs",
+          "Can read and quickly fix typing errors during compilation"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "React",
+        "icon": "⚛️",
+        "experience": [
+          "Understand the difference between functional and class components",
+          "Can work with hooks: useState, useEffect, useRef, useMemo, useCallback",
+          "Understand component lifecycle and when re-renders happen",
+          "Can create custom hooks for reusable logic",
+          "Know how to work with forms (controlled/uncontrolled components)",
+          "Understand Context API and when to use it instead of props",
+          "Can optimize performance: React.memo, useMemo, useCallback",
+          "Know how the virtual DOM works",
+          "Can work with conditional rendering and lists (keys, map)",
+          "Can work with portals (createPortal)",
+          "Know how to use Suspense and lazy for code splitting",
+          "Understand form management with React Hook Form"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Next.js",
+        "icon": "▲",
+        "experience": [
+          "Understand the difference between App Router and Pages Router",
+          "Can work with Server Components and Client Components, know when to use each",
+          "Know how file-based routing works (routing, layouts, nested routes)",
+          "Can use Server Actions for forms and data mutations",
+          "Understand rendering strategies: SSR, SSG, ISR, CSR",
+          "Can work with dynamic routes and static path generation (generateStaticParams)",
+          "Know how to optimize images and fonts with next/image and next/font",
+          "Can configure metadata and SEO (generateMetadata, next/og)",
+          "Understand how middleware works and when to use it",
+          "Can configure environment variables and deploy to Vercel"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Git & CI/CD",
+        "icon": "📚",
+        "experience": [
+          "Understand the basic workflow: commit, push, pull, branch, merge",
+          "Can work with branches and understand the difference between merge and rebase",
+          "Know how to resolve merge conflicts",
+          "Can write clear commits following Conventional Commits",
+          "Understand Git Flow / Trunk-based development",
+          "Can work with Pull Requests: code review, comments, discussing changes",
+          "Know how to revert changes (revert, reset, checkout)",
+          "Can work with .gitignore and configure git hooks (husky)",
+          "Set up CI/CD with GitHub Actions: linting, testing, auto-deployment"
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Testing",
+        "icon": "🧪",
+        "experience": [
+          "Understand the difference between unit, integration, and e2e tests",
+          "Can write unit tests for functions and components",
+          "Can configure Vitest for a project",
+          "Know how to test UI with React Testing Library",
+          "Can mock functions, modules, and API requests",
+          "Can test async code and error handling",
+          "Can write e2e tests covering user scenarios",
+          "Can configure coverage and analyze test coverage",
+          "Understand how to integrate tests into CI/CD pipeline"
+        ]
+      },
+      {
+        "id": 7,
+        "name": "State Management",
+        "icon": "📦",
+        "experience": [
+          "Understand when global state is needed and when local state is enough",
+          "Can work with Zustand for lightweight state management",
+          "Know Redux Toolkit (RTK): slices, createAsyncThunk, RTK Query",
+          "Understand the difference between client state and server state",
+          "Can work with Context API for simple cases without extra libraries",
+          "Know how to avoid unnecessary re-renders when working with state",
+          "Understand data normalization patterns in stores",
+          "Can organize store structure for project scalability"
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Best Practices",
+        "icon": "🧩",
+        "experience": [
+          "Apply KISS, DRY, YAGNI principles when designing solutions",
+          "Know SOLID and apply its principles in React components",
+          "Can separate logic and presentation (separation of concerns)",
+          "Write reusable and readable code, avoid duplication",
+          "Can decompose complex components into simpler ones",
+          "Understand the Single Responsibility principle",
+          "Know basic design patterns: Singleton, Factory, Observer",
+          "Can design project structure using feature-based or layer-based architecture",
+          "Understand composition over inheritance",
+          "Maintain architectural consistency: unified style of code, folders, and components"
+        ]
+      }
+    ]
+  }
+}

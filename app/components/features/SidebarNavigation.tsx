@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { MapPin, Mail, Home, Briefcase } from 'lucide-react';
+import { MapPin, Mail, Home, Sparkles, Briefcase } from 'lucide-react';
 import {
   SidebarContent,
   SidebarMenu,
@@ -18,6 +18,7 @@ const useNavigation = () => {
   return [
     { name: t('home'), href: '/', icon: Home },
     { name: t('journey'), href: '/journey', icon: MapPin },
+    { name: t('superpowers'), href: '/superpowers', icon: Sparkles },
     { name: t('portfolio'), href: '/portfolio', icon: Briefcase },
     { name: t('contact'), href: '/contact', icon: Mail },
   ];

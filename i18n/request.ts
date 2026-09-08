@@ -14,6 +14,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ...(await import(`../messages/journey/${locale}.json`)).default,
     ...(await import(`../messages/portfolio/${locale}.json`)).default,
     ...(await import(`../messages/contacts/${locale}.json`)).default,
+    ...(await import(`../messages/superpowers/${locale}.json`)).default,
   };
 
   return {
