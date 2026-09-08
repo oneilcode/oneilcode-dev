@@ -17,8 +17,6 @@ export const TECHNOLOGIES = [
   'Vite',
   'Webpack',
   'Git',
-  'REST',
-  'Linux',
   'Jest',
   'Cypress',
   'Zod',
