@@ -51,7 +51,7 @@ export function ProgressAnimation() {
     return (
       <div className="rounded-2xl border-2 border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-[#0a0a0f]">
         <div className="flex items-center justify-between">
-          <span className="font-mono text-xs uppercase tracking-widest text-gray-400 dark:text-gray-500">
+          <span className="font-mono text-xs tracking-widest text-gray-400 uppercase dark:text-gray-500">
             🧪 code coverage
           </span>
           <span className="font-mono text-sm font-bold text-gray-900 dark:text-white">0%</span>

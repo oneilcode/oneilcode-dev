@@ -71,7 +71,7 @@ export function JourneyTimelineSection() {
               <div
                 className={`absolute top-1 left-4 z-20 hidden h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-2 bg-white md:left-1/2 md:flex dark:bg-gray-900 ${
                   isEven
-                    ? '  text-lime-600 dark:border-lime-400  dark:text-lime-400'
+                    ? 'text-lime-600 dark:border-lime-400 dark:text-lime-400'
                     : 'border-gray-300 bg-white text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400'
                 }`}
               >
