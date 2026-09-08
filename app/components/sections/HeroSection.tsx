@@ -34,7 +34,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-           className="text-xs font-medium tracking-[0.3em] text-gray-500 uppercase dark:text-gray-400 sm:text-sm"
+            className="text-xs font-medium tracking-[0.3em] text-gray-500 uppercase sm:text-sm dark:text-gray-400"
           >
             {t('title')}
           </motion.p>
@@ -43,7 +43,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-             className="text-3xl leading-[1.1] font-light tracking-tight sm:text-4xl md:text-5xl lg:text-7xl"
+            className="text-3xl leading-[1.1] font-light tracking-tight sm:text-4xl md:text-5xl lg:text-7xl"
           >
             {t('name')}
           </motion.h1>
@@ -58,7 +58,7 @@ export default function HeroSection() {
           {TECHNOLOGIES.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-gray-200 px-2 py-0.5 text-[10px] text-gray-500 dark:border-gray-700 dark:text-gray-400 sm:px-3 sm:py-1 sm:text-xs"
+              className="rounded-full border border-gray-200 px-2 py-0.5 text-[10px] text-gray-500 sm:px-3 sm:py-1 sm:text-xs dark:border-gray-700 dark:text-gray-400"
             >
               {tech}
             </span>

@@ -18,7 +18,9 @@ export function ContactSection() {
         className="mb-8 text-center sm:mb-10 md:mb-12"
       >
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">{t('title')}</h1>
-        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 sm:text-base">{t('subtitle')}</p>
+        <p className="mt-2 text-sm text-gray-500 sm:text-base dark:text-gray-400">
+          {t('subtitle')}
+        </p>
         <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-linear-to-r from-lime-400 to-emerald-400 sm:mt-4 sm:w-20" />
       </motion.div>
 
@@ -47,8 +49,8 @@ export function ContactSection() {
           transition={{ delay: 0.4, duration: 0.5 }}
           className="lg:col-span-2"
         >
-      <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-4 sm:p-6 dark:border-gray-800 dark:bg-gray-900/50">
-      <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold sm:text-xl">
+          <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-4 sm:p-6 dark:border-gray-800 dark:bg-gray-900/50">
+            <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold sm:text-xl">
               <Sparkles size={18} className="text-lime-500 sm:size-5" />
               {t('contactsTitle')}
             </h2>
@@ -73,7 +75,9 @@ export function ContactSection() {
                       <Icon size={18} className="sm:size-5" />
                     </div>
                     <div>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 sm:text-sm">{contact.label}</p>
+                      <p className="text-xs text-gray-500 sm:text-sm dark:text-gray-400">
+                        {contact.label}
+                      </p>
                     </div>
                   </motion.a>
                 );
