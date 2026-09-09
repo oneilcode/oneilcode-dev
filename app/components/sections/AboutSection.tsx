@@ -16,7 +16,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="px-4 py-8 sm:px-6 md:py-12 lg:px-8">
+    <section className="px-4 py-8 sm:px-6 md:py-4 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

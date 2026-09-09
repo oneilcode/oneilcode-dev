@@ -10,7 +10,7 @@ export function ContactSection() {
   const t = useTranslations('contacts');
 
   return (
-    <section className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-10 md:py-12">
+    <section className="mx-auto max-w-5xl px-4 py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

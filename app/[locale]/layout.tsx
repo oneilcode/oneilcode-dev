@@ -29,7 +29,7 @@ export default async function LocaleLayout({
           <AppSidebar />
           <main className="min-h-screen flex-1">
             <Header />
-            <div className="p-8">{children}</div>
+            <div>{children}</div>
           </main>
         </SidebarProvider>
       </TooltipProvider>

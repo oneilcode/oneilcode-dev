@@ -10,7 +10,7 @@ export default function HeroSection() {
   const t = useTranslations('hero');
 
   return (
-    <section className="flex min-h-[85vh] items-center justify-center px-4 py-8 md:py-12">
+    <section className="flex h-[calc(100vh-60px)] items-center justify-center px-4 md:h-[calc(100vh-80px)]">
       <div className="max-w-2xl space-y-4 text-center md:space-y-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -58,7 +58,7 @@ export default function HeroSection() {
           {TECHNOLOGIES.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-gray-200 px-2 py-0.5 text-[10px] text-gray-500 sm:px-3 sm:py-1 sm:text-xs dark:border-gray-700 dark:text-gray-400"
+              className="rounded-full border border-gray-200 text-[10px] text-gray-500 sm:px-3 sm:py-1 sm:text-xs dark:border-gray-700 dark:text-gray-400"
             >
               {tech}
             </span>

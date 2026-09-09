@@ -40,12 +40,12 @@ export function JourneyTimelineSection() {
         <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-linear-to-r from-lime-400 to-emerald-400" />
       </motion.div>
 
-      <div className="mb-12" suppressHydrationWarning>
+      <div className="mb-12 hidden xl:block" suppressHydrationWarning>
         <ProgressAnimation />
       </div>
 
       <div className="relative">
-        <div className="absolute top-0 bottom-0 left-4 hidden w-0.5 -translate-x-1/2 bg-linear-to-b from-lime-400/50 via-gray-200 to-gray-200 md:left-1/2 md:block dark:via-gray-700 dark:to-gray-700" />
+        <div className="absolute top-0 bottom-0 left-4 hidden w-0.5 -translate-x-1/2 bg-linear-to-b from-lime-400/50 via-gray-200 to-gray-200 md:left-1/2 xl:block dark:via-gray-700 dark:to-gray-700" />
 
         {items.map((item, index) => {
           const isEven = index % 2 === 0;
@@ -64,12 +64,12 @@ export function JourneyTimelineSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ delay: index * 0.1, duration: 0.5, ease: 'easeOut' }}
-              className={`relative mb-16 flex flex-col items-start gap-6 md:flex-row ${
-                isEven ? 'md:pr-12' : 'md:ml-auto md:pl-12'
-              } ${isEven ? 'md:flex-row md:text-right' : 'md:flex-row-reverse md:text-left'}`}
+              className={`relative mb-16 flex flex-col items-start gap-6 ${
+                isEven ? 'xl:pr-40 xl:pl-4' : 'xl:-ml-8 xl:pr-4 xl:pl-12'
+              } ${isEven ? 'xl:flex-row xl:text-right' : 'xl:flex-row-reverse xl:text-left'} md:flex-col`}
             >
               <div
-                className={`absolute top-1 left-4 z-20 hidden h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-2 bg-white md:left-1/2 md:flex dark:bg-gray-900 ${
+                className={`absolute top-1 left-4 z-20 hidden h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-2 bg-white md:left-1/2 xl:flex dark:bg-gray-900 ${
                   isEven
                     ? 'text-lime-600 dark:border-lime-400 dark:text-lime-400'
                     : 'border-gray-300 bg-white text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400'
@@ -82,7 +82,7 @@ export function JourneyTimelineSection() {
                 {Icon}
               </div>
 
-              <div className="ml-16 w-full md:ml-0 md:w-[calc(50%-2rem)]">
+              <div className="w-full md:ml-0 xl:ml-16 xl:w-[calc(50%-2rem)]">
                 <motion.div
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.2 }}

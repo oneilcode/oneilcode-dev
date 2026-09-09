@@ -24,9 +24,19 @@ const useNavigation = () => {
   ];
 };
 
-export function SidebarNavigation() {
+interface SidebarNavigationProps {
+  onItemClick?: () => void;
+}
+
+export function SidebarNavigation({ onItemClick }: SidebarNavigationProps) {
   const pathname = usePathname();
   const navigation = useNavigation();
+
+  const handleClick = () => {
+    if (onItemClick) {
+      onItemClick();
+    }
+  };
 
   return (
     <SidebarContent className="flex-1 px-4 py-6">
@@ -49,6 +59,7 @@ export function SidebarNavigation() {
               <SidebarMenuButton className="p-0">
                 <Link
                   href={item.href}
+                  onClick={handleClick}
                   className={cn(
                     'flex w-full items-center gap-3 rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-200',
                     isActive
