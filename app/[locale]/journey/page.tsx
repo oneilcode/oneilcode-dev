@@ -2,7 +2,7 @@ import { JourneyTimelineSection } from '@/app/components/sections/JourneyTimelin
 
 export default function JourneyPage() {
   return (
-    <div className="min-h-screen py-12">
+    <div className="min-h-screen px-4 py-12 md:px-6 xl:px-0">
       <JourneyTimelineSection />
     </div>
   );

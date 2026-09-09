@@ -4,15 +4,79 @@ import { useTranslations } from 'next-intl';
 import { Sidebar, SidebarHeader } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { MapPin, Download } from 'lucide-react';
+import { MapPin, Download, Menu, X } from 'lucide-react';
 import { AVATAR, AVATAR_FALLBACK, CONTACTS } from '@/constants';
 import { SidebarNavigation } from '../features/SidebarNavigation';
+import { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
 
 export function AppSidebar() {
   const t = useTranslations('sidebar');
+  const [isMobile, setIsMobile] = useState(false);
+  const [isSmall, setIsSmall] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
-  return (
-    <Sidebar className="flex h-full w-72 flex-col border-r border-white/20 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-[#0a0a0f]/80">
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+
+    const checkSize = () => {
+      const mobile = window.innerWidth <= 768;
+      const small = window.innerWidth <= 500;
+
+      setIsMobile(mobile);
+      setIsSmall(small);
+
+      if (!mobile) {
+        setIsOpen(true);
+      } else {
+        setIsOpen(false);
+      }
+    };
+
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeSidebar = () => {
+    if (isMobile) {
+      setIsOpen(false);
+    }
+  };
+
+  const baseClasses =
+    'flex flex-col border-r border-white/20 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-[#0a0a0f]/80 transition-all duration-300';
+  const desktopClasses = !isMobile ? 'fixed left-0 top-0 h-screen w-72' : '';
+  const mobileClasses = isMobile
+    ? [
+        'fixed left-0 top-0 z-50 h-screen shadow-2xl',
+        isOpen ? 'translate-x-0' : '-translate-x-full',
+        isSmall ? 'w-full' : 'w-72',
+      ].join(' ')
+    : '';
+
+  const sidebarClasses = cn(baseClasses, desktopClasses, mobileClasses);
+
+  const sidebarContent = (
+    <>
+      {isMobile && (
+        <div className="flex justify-end border-b border-white/10 p-3 dark:border-white/5">
+          <button
+            onClick={closeSidebar}
+            className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800/50"
+            aria-label="Close menu"
+          >
+            <X size={22} />
+          </button>
+        </div>
+      )}
+
       <SidebarHeader className="px-4 pt-6 pb-4">
         <div className="mb-3 text-center">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -46,7 +110,7 @@ export function AppSidebar() {
         </div>
       </SidebarHeader>
 
-      <SidebarNavigation />
+      <SidebarNavigation onItemClick={closeSidebar} />
 
       <div className="space-y-4 border-t border-gray-200 p-4 dark:border-gray-800">
         <Button className="w-full gap-2 bg-lime-600 text-white transition-all hover:bg-lime-700 dark:bg-lime-500 dark:hover:bg-lime-600">
@@ -69,7 +133,39 @@ export function AppSidebar() {
           ))}
         </div>
       </div>
-    </Sidebar>
+    </>
+  );
+
+  if (!mounted) {
+    return (
+      <Sidebar className="fixed top-0 left-0 flex h-screen w-72 flex-col border-r border-white/20 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-[#0a0a0f]/80">
+        {sidebarContent}
+      </Sidebar>
+    );
+  }
+
+  return (
+    <>
+      {isMobile && (
+        <button
+          onClick={toggleSidebar}
+          className="fixed top-4 left-4 z-50 rounded-lg bg-white/80 p-2.5 shadow-lg backdrop-blur-sm transition-all hover:bg-white dark:bg-[#0a0a0f]/80 dark:hover:bg-[#0a0a0f]"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      )}
+
+      {isMobile && isOpen && (
+        <div className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm" onClick={toggleSidebar} />
+      )}
+
+      {isMobile ? (
+        <div className={sidebarClasses}>{sidebarContent}</div>
+      ) : (
+        <Sidebar className={sidebarClasses}>{sidebarContent}</Sidebar>
+      )}
+    </>
   );
 }
 
