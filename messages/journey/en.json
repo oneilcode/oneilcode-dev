@@ -6,9 +6,9 @@
     "items": [
       {
         "id": 1,
-        "date": "Apr 2026 — Jul 2026 (4 months)",
-        "title": "React / Next.js Student",
-        "subtitle": "RS School",
+        "date": "Apr 2026 — Jul 2026 (3 months)",
+        "title": "Student - React 2026 Q2",
+        "subtitle": "The Rolling Scopes School",
         "description": [
           "Explored React, Next.js, state management, client/server components, and routing",
           "Worked through an intensive 3-month curriculum with practical projects",
@@ -26,8 +26,8 @@
       {
         "id": 2,
         "date": "Nov 2025 — Apr 2026 (6 months)",
-        "title": "JavaScript / Frontend Student",
-        "subtitle": "RS School",
+        "title": "Student - JS/FE 2025 Q3 (JAVASCRIPT)",
+        "subtitle": "The Rolling Scopes School",
         "description": [
           "Watched pre-recorded webinars and studied core JavaScript concepts",
           "Completed practical coding assignments with strict deadlines",
@@ -79,14 +79,16 @@
       {
         "id": 5,
         "date": "2022 - May 2022",
-        "title": "The Beginning: Self-study",
-        "subtitle": "HTML · CSS · JavaScript",
+        "title": "The Beginning: Self-study & Freelance",
+        "subtitle": "Freelance",
         "description": [
           "Started learning layout from free courses and YouTube",
           "Built first landing pages, learned HTML, CSS, JavaScript",
-          "Explored responsive design and cross-browser compatibility"
+          "Explored responsive design and cross-browser compatibility",
+          "Started freelancing: completed first orders for landing page layout",
+          "Worked directly with clients: clarified requirements, delivered projects on time"
         ],
-        "location": "Self-taught",
+        "location": "Self-taught · Remote",
         "color": "purple"
       }
     ]
