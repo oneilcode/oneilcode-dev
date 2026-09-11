@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { Sidebar, SidebarHeader } from '@/components/ui/sidebar';
-import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { MapPin, Download, Menu, X } from 'lucide-react';
 import { AVATAR, AVATAR_FALLBACK, CONTACTS } from '@/constants';
@@ -113,10 +112,14 @@ export function AppSidebar() {
       <SidebarNavigation onItemClick={closeSidebar} />
 
       <div className="space-y-4 border-t border-gray-200 p-4 dark:border-gray-800">
-        <Button className="w-full gap-2 bg-lime-600 text-white transition-all hover:bg-lime-700 dark:bg-lime-500 dark:hover:bg-lime-600">
+        <a
+          href={t('cvUrl')}
+          download
+          className="flex w-full items-center justify-center gap-2 rounded-lg bg-lime-600 px-4 py-2.5 text-sm font-medium text-white transition-all hover:bg-lime-700 dark:bg-lime-500 dark:hover:bg-lime-600"
+        >
           <Download size={16} />
           {t('cv')}
-        </Button>
+        </a>
 
         <div className="flex justify-center gap-4 pt-1">
           {CONTACTS.map((social) => (
@@ -149,7 +152,7 @@ export function AppSidebar() {
       {isMobile && (
         <button
           onClick={toggleSidebar}
-          className="fixed top-4 left-4 z-50 rounded-lg bg-white/80 p-2.5 shadow-lg backdrop-blur-sm transition-all hover:bg-white dark:bg-[#0a0a0f]/80 dark:hover:bg-[#0a0a0f]"
+          className="fixed top-4 left-4 z-50 rounded-lg bg-white/80 p-2.5 backdrop-blur-sm transition-all hover:bg-white dark:bg-[#0a0a0f]/80 dark:hover:bg-[#0a0a0f]"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}

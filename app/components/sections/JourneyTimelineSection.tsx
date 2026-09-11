@@ -78,7 +78,7 @@ export function JourneyTimelineSection() {
                 {Icon}
               </div>
 
-              <div className="absolute top-1 left-0 flex h-12 w-12 items-center justify-center rounded-full border-2 border-lime-500 bg-lime-500/10 text-lime-600 md:hidden dark:border-lime-400 dark:bg-lime-400/10 dark:text-lime-400">
+              <div className="absolute top-1 left-0 hidden h-12 w-12 items-center justify-center rounded-full border-2 border-lime-500 bg-lime-500/10 text-lime-600 dark:border-lime-400 dark:bg-lime-400/10 dark:text-lime-400">
                 {Icon}
               </div>
 
