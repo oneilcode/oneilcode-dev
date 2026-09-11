@@ -1,8 +1,8 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { MapPin, Mail, Home, Sparkles, Briefcase } from 'lucide-react';
 import {
@@ -44,15 +44,7 @@ export function SidebarNavigation({ onItemClick }: SidebarNavigationProps) {
         {navigation.map((item) => {
           const Icon = item.icon;
 
-          const isActive = (() => {
-            if (pathname === item.href) return true;
-
-            if (item.href === '/') {
-              return pathname === '/' || pathname === '/en' || pathname === '/ru';
-            }
-
-            return pathname?.includes(item.href);
-          })();
+          const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
 
           return (
             <SidebarMenuItem key={item.name}>
