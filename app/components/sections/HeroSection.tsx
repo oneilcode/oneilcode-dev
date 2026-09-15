@@ -10,7 +10,7 @@ export default function HeroSection() {
   const t = useTranslations('hero');
 
   return (
-    <section className="mx-auto flex max-w-5xl items-center justify-center px-4 py-16">
+    <section className="flex min-h-[calc(100vh-60px)] items-center justify-center px-4 py-8 sm:py-12 md:min-h-[calc(100vh-80px)] md:py-0">
       <div className="max-w-2xl space-y-4 text-center md:space-y-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
