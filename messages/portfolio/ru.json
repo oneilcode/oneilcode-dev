@@ -21,7 +21,7 @@
         "tech": ["React", "Vite", "React Router", "JSON Server"],
         "github": "https://github.com/oneilcode/wishTick",
         "demo": "https://wishtick.onrender.com/",
-        "youtube": "https://wishtick.onrender.com/",
+        "youtube": null,
         "type": "personal",
         "role": [
           "Разработала главную страницу — лендинг для знакомства с функционалом и возможностями приложения, включая адаптивную вёрстку и анимации",
@@ -45,7 +45,7 @@
         "tech": ["React", "TypeScript", "Vite", "React Router", "React Toastify"],
         "github": "https://github.com/oneilcode/react-shop",
         "demo": "https://babushka-market.vercel.app/",
-        "youtube": "https://wishtick.onrender.com/",
+        "youtube": null,
         "type": "personal",
         "role": [
           "Разработала главную страницу — лендинг для знакомства с функционалом и возможностями приложения, включая адаптивную вёрстку и анимации",
