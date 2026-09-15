@@ -7,7 +7,7 @@
       {
         "id": 1,
         "name": "JavaScript",
-        "icon": "🟨",
+        "icon": "javascript",
         "experience": [
           "Знаю особенности типов данных и разницу между == и ===",
           "Понимаю область видимости переменных (let, const, var) и замыкания",
@@ -25,7 +25,7 @@
       {
         "id": 2,
         "name": "TypeScript",
-        "icon": "📘",
+        "icon": "typescript",
         "experience": [
           "Понимаю назначение строгого режима (strict: true) и умею настраивать tsconfig под проект",
           "Знаю, почему важно избегать any, и использую правильные типы вместо него",
@@ -41,7 +41,7 @@
       {
         "id": 3,
         "name": "React",
-        "icon": "⚛️",
+        "icon": "react",
         "experience": [
           "Понимаю разницу между функциональными и классовыми компонентами",
           "Умею работать с хуками: useState, useEffect, useRef, useMemo, useCallback",
@@ -60,7 +60,7 @@
       {
         "id": 4,
         "name": "Next.js",
-        "icon": "▲",
+        "icon": "nextjs",
         "experience": [
           "Понимаю разницу между App Router и Pages Router",
           "Умею работать с Server Components и Client Components, знаю когда что использовать",
@@ -77,7 +77,7 @@
       {
         "id": 5,
         "name": "Git & CI/CD",
-        "icon": "📚",
+        "icon": "git",
         "experience": [
           "Понимаю базовый workflow: commit, push, pull, branch, merge",
           "Умею работать с ветками и понимаю разницу между merge и rebase",
@@ -93,7 +93,7 @@
       {
         "id": 6,
         "name": "Testing",
-        "icon": "🧪",
+        "icon": "jest",
         "experience": [
           "Понимаю разницу между unit, integration и e2e тестами",
           "Умею писать unit-тесты для функций и компонентов",
@@ -109,7 +109,7 @@
       {
         "id": 7,
         "name": "State Management",
-        "icon": "📦",
+        "icon": "state-management",
         "experience": [
           "Понимаю, когда нужен глобальный state, а когда достаточно локального",
           "Умею работать с Zustand для лёгкого управления состоянием",
@@ -124,7 +124,7 @@
       {
         "id": 8,
         "name": "Best Practices",
-        "icon": "🧩",
+        "icon": "best-practices",
         "experience": [
           "Применяю принципы KISS, DRY, YAGNI при проектировании решений",
           "Знаю SOLID и применяю его отдельные принципы в React-компонентах",

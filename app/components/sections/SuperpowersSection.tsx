@@ -5,6 +5,22 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
+// ✅ Иконки технологий
+import { SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiGit, SiJest } from 'react-icons/si';
+import { Database, Award } from 'lucide-react';
+
+// ✅ Маппинг: ключ из JSON → компонент иконки
+const iconMap: Record<string, React.ComponentType<{ className?: string; size?: number }>> = {
+  javascript: SiJavascript,
+  typescript: SiTypescript,
+  react: SiReact,
+  nextjs: SiNextdotjs,
+  git: SiGit,
+  jest: SiJest,
+  'state-management': Database,
+  'best-practices': Award,
+};
+
 export default function SuperpowersSection() {
   const t = useTranslations('superpowers');
   const [openId, setOpenId] = useState<number | null>(null);
@@ -47,7 +63,14 @@ export default function SuperpowersSection() {
               className="flex w-full items-center justify-between px-6 py-4 text-left"
             >
               <div className="flex items-center gap-4">
-                <span className="text-2xl">{skill.icon}</span>
+                {(() => {
+                  const IconComponent = iconMap[skill.icon];
+                  return IconComponent ? (
+                    <IconComponent className="h-7 w-7 shrink-0 text-lime-600 dark:text-lime-400" />
+                  ) : (
+                    <span className="text-2xl">📦</span>
+                  );
+                })()}
                 <h2 className="text-lg font-bold text-gray-900 dark:text-white">{skill.name}</h2>
               </div>
               <div className="flex items-center gap-2">
