@@ -21,7 +21,7 @@
         "tech": ["React", "Vite", "React Router", "JSON Server"],
         "github": "https://github.com/oneilcode/wishTick",
         "demo": "https://wishtick.onrender.com/",
-        "youtube": "https://wishtick.onrender.com/",
+        "youtube": null,
         "type": "personal",
         "role": [
           "Designed and developed the landing page — introduced the app's functionality and features with responsive layouts and animations",
@@ -36,7 +36,7 @@
         "tech": ["React", "TypeScript", "Vite", "React Router", "React Toastify"],
         "github": "https://github.com/oneilcode/react-shop",
         "demo": "https://babushka-market.vercel.app/",
-        "youtube": "https://wishtick.onrender.com/",
+        "youtube": null,
         "type": "personal",
         "role": [
           "Designed and developed the landing page — introduced the app's functionality and features with responsive layouts and animations",
