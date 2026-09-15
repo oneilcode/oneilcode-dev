@@ -43,7 +43,7 @@
         "slug": "babushka-market",
         "description": "Онлайн-магазин антикварных товаров с корзиной и уведомлениями",
         "tech": ["React", "TypeScript", "Vite", "React Router", "React Toastify"],
-        "github": "https://github.com/oneilcode/react-shop",
+        "github": "https://github.com/oneilcode/Babushka-Market",
         "demo": "https://babushka-market.vercel.app/",
         "youtube": null,
         "type": "personal",
