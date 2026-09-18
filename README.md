@@ -1,4 +1,5 @@
 # 🚀 OneilCode | Portfolio Website
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
@@ -17,15 +18,17 @@ The site tells my story, presents my projects, describes my skills, and gives vi
 - **Skills & Tech**: an overview of technologies I work with and what I can do with them
 - **Contact**: a form to reach out, with messages stored in a database
 - **Admin Panel**: a private page where I can view and manage incoming messages
+
 ---
 
 ## 🌐 Live Demo
 
 👉 **[oneilcode-dev.vercel.app](https://oneilcode-dev.vercel.app)**
 
-| Light theme | Dark theme |
-|-------------|------------|
+| Light theme                          | Dark theme                         |
+| ------------------------------------ | ---------------------------------- |
 | ![Light](./public/preview-light.jpg) | ![Dark](./public/preview-dark.jpg) |
+
 ---
 
 ## ✨ Features
@@ -71,5 +74,3 @@ The site tells my story, presents my projects, describes my skills, and gives vi
 - 📧 [Email](mailto:oneilcode111@gmail.com)
 - 📝 [Habr](https://career.habr.com/vikaoneil)
 - 🐙 [GitHub](https://github.com/oneilcode)
-
-
