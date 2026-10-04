@@ -17,30 +17,28 @@
         "id": 1,
         "title": "WishTick",
         "slug": "wishtick",
-        "description": "Digital wish diary: add, track, and analyze your dreams",
-        "tech": ["React", "Vite", "React Router", "JSON Server"],
+        "description": "WishTick is a web app for writing down and tracking wishes, helping users keep dreams in sight and stay inspired by their own progress",
+        "tech": ["React", "TypeScript", "Vite", "React Router", "CSS Modules", "Framer Motion", "Sonner", "Supabase (Auth + Postgres)", "Unsplash API"],
         "github": "https://github.com/oneilcode/wishTick",
         "demo": "https://wishtick.onrender.com/",
         "youtube": null,
         "type": "personal",
-        "role": [
-          "Designed and developed the landing page — introduced the app's functionality and features with responsive layouts and animations",
-          "Built the Console widget — an interactive drag-and-drop exercise where users arrange console outputs in the correct order. Implemented answer validation logic and real-time feedback"
-        ]
-      },
-      {
-        "id": 2,
-        "title": "Babushka Market",
-        "slug": "babushka-market",
-        "description": "Online antique store with cart and notifications",
-        "tech": ["React", "TypeScript", "Vite", "React Router", "React Toastify"],
-        "github": "https://github.com/oneilcode/Babushka-Market",
-        "demo": "https://babushka-market.vercel.app/",
-        "youtube": null,
-        "type": "personal",
-        "role": [
-          "Designed and developed the landing page — introduced the app's functionality and features with responsive layouts and animations",
-          "Built the Console widget — an interactive drag-and-drop exercise where users arrange console outputs in the correct order. Implemented answer validation logic and real-time feedback"
+       "role": [
+          "Implemented sign up and sign in via Supabase Auth",
+          "Настроила подтверждение email с отдельной страницей-инструкциейSet up email confirmation with a dedicated verification page",
+          "Built protected and public-only routes (ProtectedRoute, PublicOnlyRoute)",
+          "Configured smart redirect from the landing page based on user state",
+          "Ensured database-level data isolation via Supabase Row Level Security",
+          "Implemented wish creation with title, description, and image",
+          "Added edit and delete with toast confirmation",
+          "Added search by title and sort by status",
+          "Designed a progress bar with a circular chart (total / completed)",
+          "Added toasts for all actions with custom styles (Sonner)",
+          "Implemented loading skeletons and custom loaders",
+          "Added smooth appearance animations with Framer Motion",
+          "Designed a minimalist light theme without bright accents",
+          "Integrated Unsplash API for random images on the Get Inspired page",
+          "Built a complete product with a full flow: from sign-up to wish management. Delivered clean architecture, type safety, responsive design, and attention to UX"
         ]
       },
       {
