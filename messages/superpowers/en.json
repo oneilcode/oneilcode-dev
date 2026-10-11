@@ -123,6 +123,21 @@
       },
       {
         "id": 8,
+        "name": "AI Tools",
+        "icon": "ai-tools",
+        "experience": [
+          "Use AI assistants (ChatGPT, Claude, GitHub Copilot, Cursor) for code generation and refactoring",
+          "Can write effective prompts to get accurate and useful results",
+          "Use AI for code review, finding bugs, and suggesting improvements",
+          "Generate unit tests, documentation, and comments with AI assistance",
+          "Use AI to speed up learning new technologies and understanding unfamiliar codebases",
+          "Know how to integrate AI tools into daily development workflow (IDE plugins, CLI tools)",
+          "Can critically evaluate and verify AI-generated solutions before using them in production",
+          "Use AI for automating routine tasks: commit messages, regex, SQL queries, config generation"
+        ]
+      },
+      {
+        "id": 9,
         "name": "Best Practices",
         "icon": "best-practices",
         "experience": [
