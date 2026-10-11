@@ -4,12 +4,9 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-
-// ✅ Иконки технологий
-import { SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiGit, SiJest } from 'react-icons/si';
+import { SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiGit, SiJest, SiGithubcopilot } from 'react-icons/si';
 import { Database, Award } from 'lucide-react';
 
-// ✅ Маппинг: ключ из JSON → компонент иконки
 const iconMap: Record<string, React.ComponentType<{ className?: string; size?: number }>> = {
   javascript: SiJavascript,
   typescript: SiTypescript,
@@ -17,6 +14,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string; size?: n
   nextjs: SiNextdotjs,
   git: SiGit,
   jest: SiJest,
+  'ai-tools': SiGithubcopilot,
   'state-management': Database,
   'best-practices': Award,
 };
