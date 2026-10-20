@@ -4,23 +4,12 @@ import { motion } from 'framer-motion';
 import { Users, User } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { PortfolioCard } from '../features/PortfolioCard';
+import { Project } from '@/types/project';
 
 export function PortfolioSection() {
   const t = useTranslations('portfolio');
 
-  const items = t.raw('items') as Array<{
-    id: number;
-    slug: string;
-    title: string;
-    description: string;
-    tech: string[];
-    github: string;
-    demo: string | null;
-    featured: boolean;
-    type: 'personal' | 'team';
-    role: string | null;
-    features: string[];
-  }>;
+  const items = t.raw('items') as Project[];
 
   if (!Array.isArray(items)) {
     return null;
@@ -42,22 +31,6 @@ export function PortfolioSection() {
         <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-linear-to-r from-lime-400 to-emerald-400" />
       </motion.div>
 
-      {teamProjects.length > 0 && (
-        <>
-          <div className="mb-4 flex items-center gap-2">
-            <Users size={18} className="text-blue-500" />
-            <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-              {t('teamTitle')}
-            </h2>
-          </div>
-          <div className="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {teamProjects.map((project, index) => (
-              <PortfolioCard key={project.id} project={project} index={index} />
-            ))}
-          </div>
-        </>
-      )}
-
       {personalProjects.length > 0 && (
         <>
           <div className="mb-4 flex items-center gap-2">
@@ -66,13 +39,30 @@ export function PortfolioSection() {
               {t('personalTitle')}
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {personalProjects.map((project, index) => (
               <PortfolioCard key={project.id} project={project} index={index} />
             ))}
           </div>
         </>
       )}
+
+      {teamProjects.length > 0 && (
+        <>
+          <div className="mb-4 flex items-center gap-2">
+            <Users size={18} className="text-blue-500" />
+            <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+              {t('teamTitle')}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {teamProjects.map((project, index) => (
+              <PortfolioCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
+        </>
+      )}
+
     </section>
   );
 }
