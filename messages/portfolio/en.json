@@ -31,6 +31,7 @@
           "Ensured database-level data isolation via Supabase Row Level Security",
           "Implemented wish creation with title, description, and image",
           "Added edit and delete with toast confirmation",
+          "Integrated AI assistant powered by Groq API: generate wish ideas from keywords with auto-fill for title and description",
           "Added search by title and sort by status",
           "Designed a progress bar with a circular chart (total / completed)",
           "Added toasts for all actions with custom styles (Sonner)",
